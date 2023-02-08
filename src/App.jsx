@@ -1,20 +1,36 @@
 import React, { useEffect, useState } from "react";
-
-const App =()=> {
-
-
-  const [count ,setCount] = useState(1)
+import "./App.css"
 
 
+
+
+
+// usestate function
+function CounterApp(){
+  // usestate
+  const [count, setCount] = useState(1)
   function countfun() {
     setCount(count + 1)
   }
-  return(
-    <div className="App" style={{alignItems: "center", justifyContent: "center", display: "flex"}}>
+return(
+    <center>
       <h1>sample button</h1>
-<button  onClick={countfun}>count button:{count}</button>
+      <button onClick={countfun}>count button:{count}</button>
+    </center>
+)
+}
+
+
+
+
+
+
+
+const App=()=>{
+  return(
+    <div>
+      <CounterApp />
     </div>
   )
 }
-
 export default App
